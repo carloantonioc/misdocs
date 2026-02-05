@@ -1,0 +1,10 @@
+site_name: misdocs
+theme:
+  name: material
+  language: es
+  palette:
+    primary: blue
+    accent: indigo
+
+nav:
+  - Inicio: index.md
