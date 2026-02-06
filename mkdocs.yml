@@ -5,6 +5,12 @@ theme:
   palette:
     primary: blue
     accent: indigo
+  features:
+    - navigation.tabs  # ← ¡Esto activa pestañas horizontales!
+    - navigation.sections  # opcional: permite secciones colapsables
+    - navigation.expand  # expande secciones automáticamente
 
-nav:
-  - Inicio: index.md
+plugins:
+  - awesome-pages
+  - git-revision-date-localized
+  - search

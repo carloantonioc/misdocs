@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# Bienvenido a Mis Documentos
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Este sitio reúne la documentación técnica, guías y referencias para nuestros proyectos y procesos internos.
 
-## Commands
+## 🧭 Navegación rápida
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **Guías**: Instrucciones paso a paso para configurar entornos, herramientas y flujos de trabajo.
+- **Referencia Técnica**: Especificaciones, APIs, formatos y buenas prácticas.
+- **Tutoriales**: Ejemplos prácticos desde lo básico hasta casos avanzados.
 
-## Project layout
+> ¿No encuentras lo que buscas? Usa la barra de búsqueda en la parte superior.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+---
+
+*Última actualización: {{ git_revision_date_localized }}*
