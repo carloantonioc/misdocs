@@ -111,6 +111,155 @@ mkdocs gh-deploy
 
 ---
 
+## Despliegue en GitHub Pages
+
+### Configuración completa paso a paso
+
+#### 1. Inicializa Git en tu proyecto (si no lo has hecho)
+
+```bash
+git init
+git add .
+git commit -m "Initial commit: MkDocs setup"
+```
+
+#### 2. Crea un repositorio en GitHub
+
+1. Ve a [GitHub](https://github.com)
+2. Click en el botón **New** (o el símbolo +)
+3. Crea un nuevo repositorio (ejemplo: `mi-documentacion`)
+4. **No inicialices** con README, .gitignore o licencia
+
+#### 3. Conecta tu repositorio local con GitHub
+
+```bash
+git remote add origin https://github.com/tu-usuario/mi-documentacion.git
+git branch -M main
+git push -u origin main
+```
+
+#### 4. Despliega tu sitio con MkDocs
+
+```bash
+mkdocs gh-deploy
+```
+
+Este comando hará automáticamente:
+
+- ✅ Compilará tu sitio (`mkdocs build`)
+- ✅ Creará la rama `gh-pages` (si no existe)
+- ✅ Subirá los archivos compilados a esa rama
+- ✅ GitHub detectará y activará GitHub Pages automáticamente
+
+#### 5. Verifica la configuración en GitHub
+
+1. Ve a tu repositorio en GitHub
+2. Click en **Settings** (Configuración)
+3. En el menú lateral, click en **Pages**
+4. Deberías ver algo como:
+
+```
+Source: Deploy from a branch
+Branch: gh-pages / (root)
+```
+
+**Estado:** "Your GitHub Pages site is currently being built from the gh-pages branch"
+
+> **✅ Si ves esto, está correctamente configurado.** No necesitas cambiar nada.
+
+#### 6. Accede a tu sitio publicado
+
+Espera 1-2 minutos y tu sitio estará disponible en:
+
+```
+https://tu-usuario.github.io/nombre-del-repositorio/
+```
+
+**Ejemplo:** Si tu usuario es `juanperez` y el repo es `misdocs`:
+
+```
+https://juanperez.github.io/misdocs/
+```
+
+---
+
+### Workflow de actualización continua
+
+Cada vez que hagas cambios en tu documentación:
+
+```bash
+# 1. Edita tus archivos .md en la carpeta docs/
+
+# 2. (Opcional) Guarda los cambios en la rama main
+git add .
+git commit -m "Actualización de documentación"
+git push origin main
+
+# 3. Despliega los cambios a GitHub Pages
+mkdocs gh-deploy
+```
+
+**¡Eso es todo!** Tu sitio se actualizará automáticamente en 1-2 minutos.
+
+---
+
+### Automatización con GitHub Actions (Opcional)
+
+Para despliegues automáticos cada vez que hagas `push` a la rama `main`, crea este archivo:
+
+**`.github/workflows/deploy.yml`**
+
+```yaml
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin
+      
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
+```
+
+**Con esta configuración:**
+
+1. Haces cambios en tus archivos `.md`
+2. Ejecutas `git push`
+3. GitHub Actions despliega automáticamente
+4. Tu sitio se actualiza sin ejecutar `mkdocs gh-deploy` manualmente
+
+---
+
+### Estructura final de ramas en GitHub
+
+Tu repositorio tendrá dos ramas:
+
+- **`main`**: Archivos fuente (mkdocs.yml, docs/, .venv/, etc.)
+- **`gh-pages`**: Sitio compilado (generado automáticamente por `mkdocs gh-deploy`)
+
+> **📝 Nota:** Nunca edites la rama `gh-pages` manualmente. Siempre se regenera automáticamente.
+
+---
+
 ## Mejores prácticas
 
 ### 1. Añade un `.gitignore`
