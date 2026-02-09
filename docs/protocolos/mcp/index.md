@@ -54,9 +54,9 @@ Tabla de dependencias y herramientas necesarias para replicar la integración MC
 | Programa / Librería | Descripción breve | Guía rápida de instalación |
 |---------------------|-------------------|----------------------------|
 | **Python ≥ 3.8** | Entorno base para ejecutar scripts y servidores MCP | [Instalación oficial](https://www.python.org/downloads/) |
-| **uv** | Gestor de paquetes y entornos virtuales rápido (reemplaza a pip + venv) | ```curl -LsSf https://astral.sh/uv/install.sh \| sh```<br>[Documentación](https://docs.astral.sh/uv/) |
-| **WSL (opcional)** | Entorno Linux en Windows para desarrollo terminal-based | ```wsl --install```<br>[Guía Microsoft](https://learn.microsoft.com/es-es/windows/wsl/install) |
-| **fastmcp** | Implementación del protocolo MCP (servidor y cliente) | ```uv add fastmcp```<br>[GitHub](https://github.com/aleph-alpha/fastmcp) |
+| **uv** | Gestor de paquetes y entornos virtuales rápido (reemplaza a pip + venv) | ver guia rapida |
+| **WSL (opcional)** | Entorno Linux en Windows para desarrollo terminal-based | ver guia rapida |
+| **fastmcp** | Implementación del protocolo MCP (servidor y cliente) | ```uv add fastmcp``` |
 | **requests** | Biblioteca para llamadas HTTP a la API de DashScope | ```uv add requests```<br>[Documentación](https://requests.readthedocs.io/) |
 | **DashScope Account** | Cuenta en Alibaba Cloud para acceder a Qwen-Turbo | [Registro gratuito](https://dashscope.aliyun.com/) |
 | **Token sk-...** | Clave API con prefijo `sk-` para modo compatible | Generar en [DashScope Console > API Keys](https://dashscope.aliyun.com/console/api-key) |
@@ -68,54 +68,7 @@ Tabla de dependencias y herramientas necesarias para replicar la integración MC
 - ✅ **Entorno**: Todo probado en WSL + Ubuntu + Python 3.10 + uv 0.2+
 - ✅ **Dependencias**: Solo se requieren `fastmcp` y `requests` (no se necesita `openai` ni `dashscope` SDK)
 
-## 3. Instalar y configurar WSL
-
-### 3.1 Instalar WSL (PowerShell como Administrador)
-
-``` powershell
-wsl --install
-wsl --list --online
-wsl --install -d Ubuntu-22.04
-```
-
-------------------------------------------------------------------------
-
-### 3.2 Configurar recursos de WSL (Windows)
-
-**⚠️ Importante:**\
-El archivo **`.wslconfig` se crea en Windows**, directamente en:
-
-    C:\Users\<tu_usuario>\.wslconfig
-
-Contenido del archivo:
-
-``` ini
-[wsl2]
-memory=2GB
-processors=2
-swap=1GB
-localhostForwarding=true
-```
-
-Reiniciar WSL después:
-
-``` powershell
-wsl --shutdown
-```
-
-------------------------------------------------------------------------
-
-## 4. Primera vez en Ubuntu (WSL)
-
-``` bash
-sudo apt update && sudo apt upgrade -y
-python3 --version    # Debe ser ≥ 3.10
-pip --version        # Si no existe: sudo apt install python3-pip
-```
-
-------------------------------------------------------------------------
-
-## 5. Preparar el entorno de trabajo
+## 3. Preparar el entorno de trabajo
 
 **Desde la terminal de Ubuntu (WSL), navega al sistema de archivos de
 Windows y crea tu carpeta de proyecto:**
@@ -131,7 +84,7 @@ completamente dentro de WSL.
 
 ------------------------------------------------------------------------
 
-## 6. Configurar VS Code con WSL
+## 4. Configurar VS Code con WSL
 
 Desde la carpeta del proyecto:
 
@@ -144,7 +97,7 @@ WSL**, no PowerShell ni CMD
 
 ------------------------------------------------------------------------
 
-## 7. Instalar el SDK de MCP
+## 5. Instalar el SDK de MCP
 
 ``` bash
 pip install "mcp[cli]"
@@ -164,7 +117,7 @@ Salida esperada:
 
 ------------------------------------------------------------------------
 
-## 8. Requisito adicional: Node.js (solo para modo desarrollo)
+## 6. Requisito adicional: Node.js (solo para modo desarrollo)
 
 ⚠️ **Solo necesario para `mcp dev`**, ya que utiliza el MCP Inspector
 vía `npx`.
@@ -176,17 +129,7 @@ sudo apt install -y nodejs
 
 ------------------------------------------------------------------------
 
-## 9. Instalar uv (opcional, recomendado)
-
-``` bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-source ~/.bashrc
-uv --version
-```
-
-------------------------------------------------------------------------
-
-## 10. Crear tu servidor MCP
+## 7. Crear tu servidor MCP
 
 ``` python
 from mcp.server.fastmcp import FastMCP
@@ -207,7 +150,7 @@ if __name__ == "__main__":
 
 ------------------------------------------------------------------------
 
-## 11. Ejecutar el servidor
+## 8. Ejecutar el servidor
 
 
 ``` bash
@@ -221,8 +164,3 @@ npx @modelcontextprotocol/inspector mcp run server.py
 ```
 
 ------------------------------------------------------------------------
-
-## 12. Estado
-
-✅ Flujo completo probado y funcional en entorno **WSL2**\
-📅 Validado el **29 de enero de 2026**
