@@ -190,7 +190,10 @@ Cada vez que hagas cambios en tu documentación:
 ```bash
 # 1. Edita tus archivos .md en la carpeta docs/
 
-# 2. (Opcional) Guarda los cambios en la rama main
+# 2. Si usas uv activar el ambiente virtual/
+source .venv/bin/activate
+
+# 3. Guarda los cambios en la rama main
 git add .
 git commit -m "Actualización de documentación"
 git push origin main
