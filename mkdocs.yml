@@ -1,16 +1,38 @@
 site_name: misdocs
+
 theme:
   name: material
   language: es
   palette:
-    primary: blue
-    accent: indigo
+    # Modo claro
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    # Modo oscuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
   features:
-    - navigation.tabs  # ← ¡Esto activa pestañas horizontales!
+    - navigation.tabs  # <- ¡Esto activa pestañas horizontales!
     - navigation.sections  # opcional: permite secciones colapsables
     - navigation.expand  # expande secciones automáticamente
+    - content.code.copy  # <- ¡ESTO ACTIVA EL BOTÓN DE COPIAR CÓDIGO!
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true  # <- ¡ESTA LÍNEA ES OBLIGATORIA para clipboard!
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 plugins:
+  - search
   - awesome-pages
   - git-revision-date-localized
-  - search
