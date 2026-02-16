@@ -1,0 +1,2626 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ingles/terminaciones/">
+      
+      
+        <link rel="next" href="../protocolos/mcp/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Guía Completa: Configuración de MkDocs con Material y UV - misdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-completa-configuracion-de-mkdocs-con-material-y-uv" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="misdocs" class="md-header__button md-logo" aria-label="misdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            misdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guía Completa: Configuración de MkDocs con Material y UV
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Bienvenido a Mis Documentos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guias%20rapidas/uv/" class="md-tabs__link">
+          
+  
+  
+  Guias rapidas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ingles/articulos/" class="md-tabs__link">
+          
+  
+  
+  Ingles
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Mkdocs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../protocolos/mcp/" class="md-tabs__link">
+          
+  
+  
+  Protocolos
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="misdocs" class="md-nav__button md-logo" aria-label="misdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    misdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bienvenido a Mis Documentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guias rapidas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guias rapidas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guias%20rapidas/uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Completa de uv - Gestor Moderno de Proyectos Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guias%20rapidas/wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Instalación de WSL (Windows Subsystem for Linux) en Windows 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ingles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ingles/articulos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen: Artículos en Inglés
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ingles/terminaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reglas para formar el plural de sustantivos en inglés
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mkdocs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mkdocs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Completa: Configuración de MkDocs con Material y UV
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Completa: Configuración de MkDocs con Material y UV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-del-proyecto-con-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación del proyecto con uv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación del proyecto con uv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-inicial-inicializar-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso inicial: Inicializar el proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-entorno-y-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del entorno y dependencias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración del entorno y dependencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navegar-al-directorio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegar al directorio del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-entorno-virtual-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un entorno virtual Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activar-el-entorno-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activar el entorno virtual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalar-mkdocs-y-plugins-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar MkDocs y plugins útiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-inicial-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura inicial del proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura inicial del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicializar-la-estructura-de-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicializar la estructura de MkDocs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-basica-de-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración básica de mkdocs.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-utiles-para-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos útiles para desarrollo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos útiles para desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iniciar-servidor-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iniciar servidor de desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construir-el-sitio-estatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construir el sitio estático
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desplegar-si-usas-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desplegar (si usas GitHub Pages)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#despliegue-en-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Despliegue en GitHub Pages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Despliegue en GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-completa-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración completa paso a paso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración completa paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inicializa-git-en-tu-proyecto-si-no-lo-has-hecho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inicializa Git en tu proyecto (si no lo has hecho)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-crea-un-repositorio-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Crea un repositorio en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-conecta-tu-repositorio-local-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Conecta tu repositorio local con GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-despliega-tu-sitio-con-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Despliega tu sitio con MkDocs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verifica-la-configuracion-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Verifica la configuración en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-accede-a-tu-sitio-publicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Accede a tu sitio publicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-de-actualizacion-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow de actualización continua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatizacion-con-github-actions-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatización con GitHub Actions (Opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-final-de-ramas-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura final de ramas en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mejores-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mejores prácticas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mejores prácticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-anade-un-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Añade un .gitignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-crea-un-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Crea un requirements.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-del-plugin-mkdocs-awesome-pages-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso del plugin mkdocs-awesome-pages-plugin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso del plugin mkdocs-awesome-pages-plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-instalar-el-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1: Instalar el plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-configurar-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2: Configurar mkdocs.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-organiza-tus-archivos-en-carpetas-por-categoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3: Organiza tus archivos en carpetas por categoría
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-4-opcional-pero-recomendado-crea-archivos-pages-para-personalizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4 (opcional pero recomendado): Crea archivos .pages para personalizar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4 (opcional pero recomendado): Crea archivos .pages para personalizar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docsguiaspages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docs/guias/.pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docsreferenciapages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docs/referencia/.pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstutorialespages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docs/tutoriales/.pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-5-prueba-tu-sitio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 5: Prueba tu sitio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejo-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Consejo final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-completa-del-archivo-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración completa del archivo mkdocs.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-archivos-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de archivos del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-de-referencia-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos de referencia rápida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos adicionales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Protocolos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mcp
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mcp
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocolos/mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocolos/mcp/PruebaConexionQwen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prueba: Conexion LLM Qwen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-del-proyecto-con-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación del proyecto con uv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación del proyecto con uv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-inicial-inicializar-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso inicial: Inicializar el proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-entorno-y-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del entorno y dependencias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración del entorno y dependencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navegar-al-directorio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegar al directorio del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-entorno-virtual-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un entorno virtual Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activar-el-entorno-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activar el entorno virtual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalar-mkdocs-y-plugins-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar MkDocs y plugins útiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-inicial-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura inicial del proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura inicial del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicializar-la-estructura-de-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicializar la estructura de MkDocs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-basica-de-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración básica de mkdocs.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-utiles-para-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos útiles para desarrollo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos útiles para desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iniciar-servidor-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iniciar servidor de desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construir-el-sitio-estatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construir el sitio estático
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desplegar-si-usas-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desplegar (si usas GitHub Pages)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#despliegue-en-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Despliegue en GitHub Pages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Despliegue en GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-completa-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración completa paso a paso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración completa paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inicializa-git-en-tu-proyecto-si-no-lo-has-hecho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inicializa Git en tu proyecto (si no lo has hecho)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-crea-un-repositorio-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Crea un repositorio en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-conecta-tu-repositorio-local-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Conecta tu repositorio local con GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-despliega-tu-sitio-con-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Despliega tu sitio con MkDocs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verifica-la-configuracion-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Verifica la configuración en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-accede-a-tu-sitio-publicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Accede a tu sitio publicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-de-actualizacion-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow de actualización continua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatizacion-con-github-actions-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatización con GitHub Actions (Opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-final-de-ramas-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura final de ramas en GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mejores-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mejores prácticas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mejores prácticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-anade-un-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Añade un .gitignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-crea-un-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Crea un requirements.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-del-plugin-mkdocs-awesome-pages-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso del plugin mkdocs-awesome-pages-plugin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso del plugin mkdocs-awesome-pages-plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-instalar-el-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1: Instalar el plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-configurar-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2: Configurar mkdocs.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-organiza-tus-archivos-en-carpetas-por-categoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3: Organiza tus archivos en carpetas por categoría
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-4-opcional-pero-recomendado-crea-archivos-pages-para-personalizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4 (opcional pero recomendado): Crea archivos .pages para personalizar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4 (opcional pero recomendado): Crea archivos .pages para personalizar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docsguiaspages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docs/guias/.pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docsreferenciapages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docs/referencia/.pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstutorialespages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docs/tutoriales/.pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-5-prueba-tu-sitio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 5: Prueba tu sitio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejo-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Consejo final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-completa-del-archivo-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración completa del archivo mkdocs.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-archivos-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de archivos del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-de-referencia-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comandos de referencia rápida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos adicionales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-completa-configuracion-de-mkdocs-con-material-y-uv">Guía Completa: Configuración de MkDocs con Material y UV</h1>
+<p>Esta guía proporciona todos los pasos necesarios para crear y configurar un proyecto MkDocs con el tema Material, utilizando <code>uv</code> para mantener las dependencias aisladas.</p>
+<hr />
+<h2 id="creacion-del-proyecto-con-uv">Creación del proyecto con uv</h2>
+<h3 id="paso-inicial-inicializar-el-proyecto">Paso inicial: Inicializar el proyecto</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>uv<span class="w"> </span>init<span class="w"> </span>misdocs
+</code></pre></div></td></tr></table></div>
+<p>Este comando creará una nueva carpeta <code>misdocs</code> con la estructura básica del proyecto.</p>
+<hr />
+<h2 id="configuracion-del-entorno-y-dependencias">Configuración del entorno y dependencias</h2>
+<h3 id="navegar-al-directorio-del-proyecto">Navegar al directorio del proyecto</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># Navega al directorio del proyecto</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>misdocs
+</code></pre></div></td></tr></table></div>
+<h3 id="crear-un-entorno-virtual-python">Crear un entorno virtual Python</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># Crea un entorno virtual Python</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>uv<span class="w"> </span>venv
+</code></pre></div></td></tr></table></div>
+<h3 id="activar-el-entorno-virtual">Activar el entorno virtual</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Activa el entorno virtual</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w">  </span><span class="c1"># En Linux/Mac</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># o</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>.<span class="se">\.</span>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate<span class="w">  </span><span class="c1"># En Windows</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="instalar-mkdocs-y-plugins-utiles">Instalar MkDocs y plugins útiles</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Instala MkDocs y plugins útiles</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="estructura-inicial-del-proyecto">Estructura inicial del proyecto</h2>
+<h3 id="inicializar-la-estructura-de-mkdocs">Inicializar la estructura de MkDocs</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># Inicializa la estructura de MkDocs</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>mkdocs<span class="w"> </span>new<span class="w"> </span>.
+</code></pre></div></td></tr></table></div>
+<p>Esto creará:</p>
+<ul>
+<li><code>docs/</code> - Carpeta para tu documentación</li>
+<li><code>mkdocs.yml</code> - Archivo de configuración principal</li>
+</ul>
+<hr />
+<h2 id="configuracion-basica-de-mkdocsyml">Configuración básica de mkdocs.yml</h2>
+<p>Edita el archivo <code>mkdocs.yml</code> con la siguiente configuración inicial:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mis Documentos</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nt">theme</span><span class="p">:</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">es</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="nt">accent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indigo</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Inicio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="comandos-utiles-para-desarrollo">Comandos útiles para desarrollo</h2>
+<h3 id="iniciar-servidor-de-desarrollo">Iniciar servidor de desarrollo</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># Iniciar servidor de desarrollo</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>mkdocs<span class="w"> </span>serve
+</code></pre></div></td></tr></table></div>
+<h3 id="construir-el-sitio-estatico">Construir el sitio estático</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># Construir el sitio estático</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>mkdocs<span class="w"> </span>build
+</code></pre></div></td></tr></table></div>
+<h3 id="desplegar-si-usas-github-pages">Desplegar (si usas GitHub Pages)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1"># Desplegar (si usas GitHub Pages)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="despliegue-en-github-pages">Despliegue en GitHub Pages</h2>
+<h3 id="configuracion-completa-paso-a-paso">Configuración completa paso a paso</h3>
+<h4 id="1-inicializa-git-en-tu-proyecto-si-no-lo-has-hecho">1. Inicializa Git en tu proyecto (si no lo has hecho)</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>git<span class="w"> </span>init
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit: MkDocs setup&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="2-crea-un-repositorio-en-github">2. Crea un repositorio en GitHub</h4>
+<ol>
+<li>Ve a <a href="https://github.com">GitHub</a></li>
+<li>Click en el botón <strong>New</strong> (o el símbolo +)</li>
+<li>Crea un nuevo repositorio (ejemplo: <code>mi-documentacion</code>)</li>
+<li><strong>No inicialices</strong> con README, .gitignore o licencia</li>
+</ol>
+<h4 id="3-conecta-tu-repositorio-local-con-github">3. Conecta tu repositorio local con GitHub</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/tu-usuario/mi-documentacion.git
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div></td></tr></table></div>
+<h4 id="4-despliega-tu-sitio-con-mkdocs">4. Despliega tu sitio con MkDocs</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div></td></tr></table></div>
+<p>Este comando hará automáticamente:</p>
+<ul>
+<li>✅ Compilará tu sitio (<code>mkdocs build</code>)</li>
+<li>✅ Creará la rama <code>gh-pages</code> (si no existe)</li>
+<li>✅ Subirá los archivos compilados a esa rama</li>
+<li>✅ GitHub detectará y activará GitHub Pages automáticamente</li>
+</ul>
+<h4 id="5-verifica-la-configuracion-en-github">5. Verifica la configuración en GitHub</h4>
+<ol>
+<li>Ve a tu repositorio en GitHub</li>
+<li>Click en <strong>Settings</strong> (Configuración)</li>
+<li>En el menú lateral, click en <strong>Pages</strong></li>
+<li>Deberías ver algo como:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>Source: Deploy from a branch
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>Branch: gh-pages / (root)
+</code></pre></div></td></tr></table></div>
+<p><strong>Estado:</strong> "Your GitHub Pages site is currently being built from the gh-pages branch"</p>
+<blockquote>
+<p><strong>✅ Si ves esto, está correctamente configurado.</strong> No necesitas cambiar nada.</p>
+</blockquote>
+<h4 id="6-accede-a-tu-sitio-publicado">6. Accede a tu sitio publicado</h4>
+<p>Espera 1-2 minutos y tu sitio estará disponible en:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>https://tu-usuario.github.io/nombre-del-repositorio/
+</code></pre></div></td></tr></table></div>
+<p><strong>Ejemplo:</strong> Si tu usuario es <code>juanperez</code> y el repo es <code>misdocs</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>https://juanperez.github.io/misdocs/
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="workflow-de-actualizacion-continua">Workflow de actualización continua</h3>
+<p>Cada vez que hagas cambios en tu documentación:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="c1"># 1. Edita tus archivos .md en la carpeta docs/</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="c1"># 2. Si usas uv activar el ambiente virtual/</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="c1"># 3. Guarda los cambios en la rama main</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Actualización de documentación&quot;</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="c1"># 3. Despliega los cambios a GitHub Pages</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div></td></tr></table></div>
+<p><strong>¡Eso es todo!</strong> Tu sitio se actualizará automáticamente en 1-2 minutos.</p>
+<hr />
+<h3 id="automatizacion-con-github-actions-opcional">Automatización con GitHub Actions (Opcional)</h3>
+<p>Para despliegues automáticos cada vez que hagas <code>push</code> a la rama <code>main</code>, crea este archivo:</p>
+<p><strong><code>.github/workflows/deploy.yml</code></strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span>
+<span class="normal"><a href="#__codelineno-17-21">21</a></span>
+<span class="normal"><a href="#__codelineno-17-22">22</a></span>
+<span class="normal"><a href="#__codelineno-17-23">23</a></span>
+<span class="normal"><a href="#__codelineno-17-24">24</a></span>
+<span class="normal"><a href="#__codelineno-17-25">25</a></span>
+<span class="normal"><a href="#__codelineno-17-26">26</a></span>
+<span class="normal"><a href="#__codelineno-17-27">27</a></span>
+<span class="normal"><a href="#__codelineno-17-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy MkDocs to GitHub Pages</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="nt">on</span><span class="p">:</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="nt">permissions</span><span class="p">:</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup Python</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a>
+<a id="__codelineno-17-23" name="__codelineno-17-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25"></a><span class="w">          </span><span class="no">pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26"></a>
+<a id="__codelineno-17-27" name="__codelineno-17-27"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Con esta configuración:</strong></p>
+<ol>
+<li>Haces cambios en tus archivos <code>.md</code></li>
+<li>Ejecutas <code>git push</code></li>
+<li>GitHub Actions despliega automáticamente</li>
+<li>Tu sitio se actualiza sin ejecutar <code>mkdocs gh-deploy</code> manualmente</li>
+</ol>
+<hr />
+<h3 id="estructura-final-de-ramas-en-github">Estructura final de ramas en GitHub</h3>
+<p>Tu repositorio tendrá dos ramas:</p>
+<ul>
+<li><strong><code>main</code></strong>: Archivos fuente (mkdocs.yml, docs/, .venv/, etc.)</li>
+<li><strong><code>gh-pages</code></strong>: Sitio compilado (generado automáticamente por <code>mkdocs gh-deploy</code>)</li>
+</ul>
+<blockquote>
+<p><strong>📝 Nota:</strong> Nunca edites la rama <code>gh-pages</code> manualmente. Siempre se regenera automáticamente.</p>
+</blockquote>
+<hr />
+<h2 id="mejores-practicas">Mejores prácticas</h2>
+<h3 id="1-anade-un-gitignore">1. Añade un <code>.gitignore</code></h3>
+<p>Crea un archivo <code>.gitignore</code> con el siguiente contenido:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>.venv/
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>site/
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>*.pyc
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>__pycache__/
+</code></pre></div></td></tr></table></div>
+<h3 id="2-crea-un-requirementstxt">2. Crea un <code>requirements.txt</code></h3>
+<p>Para mantener un registro de tus dependencias:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="uso-del-plugin-mkdocs-awesome-pages-plugin">Uso del plugin mkdocs-awesome-pages-plugin</h2>
+<p>Este plugin te permite organizar mejor la navegación de tu documentación.</p>
+<h3 id="paso-1-instalar-el-plugin">Paso 1: Instalar el plugin</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1"># Asegúrate de estar en tu entorno (con .venv activado)</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w">  </span><span class="c1"># Linux/Mac</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="c1"># o</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>.<span class="se">\.</span>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate<span class="w">  </span><span class="c1"># Windows</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="c1"># Instala el plugin</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-awesome-pages-plugin
+</code></pre></div></td></tr></table></div>
+<h3 id="paso-2-configurar-mkdocsyml">Paso 2: Configurar <code>mkdocs.yml</code></h3>
+<p>Edita tu archivo <code>mkdocs.yml</code> y <strong>elimina la sección <code>nav</code></strong> (si la tienes). Luego añade el plugin:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mis Documentos</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="nt">theme</span><span class="p">:</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">  </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">es</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.top</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="nt">plugins</span><span class="p">:</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesome-pages</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p><strong>💡 Importante:</strong> Sin <code>nav</code>, el plugin construirá la navegación automáticamente desde tus carpetas.</p>
+</blockquote>
+<hr />
+<h2 id="paso-3-organiza-tus-archivos-en-carpetas-por-categoria">Paso 3: Organiza tus archivos en carpetas por categoría</h2>
+<p>Ejemplo de estructura sugerida:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span>
+<span class="normal"><a href="#__codelineno-22-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>docs/
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>├──<span class="w"> </span>index.md<span class="w">              </span><span class="c1"># Página principal</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>├──<span class="w"> </span>guias/
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>│<span class="w">   </span>├──<span class="w"> </span>intro.md
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>│<span class="w">   </span>└──<span class="w"> </span>instalacion.md
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>├──<span class="w"> </span>referencia/
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>│<span class="w">   </span>├──<span class="w"> </span>api.md
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>│<span class="w">   </span>└──<span class="w"> </span>config.md
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a>└──<span class="w"> </span>tutoriales/
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">    </span>├──<span class="w"> </span>basico.md
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">    </span>└──<span class="w"> </span>avanzado.md
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="paso-4-opcional-pero-recomendado-crea-archivos-pages-para-personalizar">Paso 4 (opcional pero recomendado): Crea archivos <code>.pages</code> para personalizar</h2>
+<p>Dentro de cada carpeta, crea un archivo <code>.pages</code> para darle título y orden:</p>
+<h3 id="docsguiaspages"><code>docs/guias/.pages</code></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guías</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Introducción</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.md</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Instalación</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instalacion.md</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="docsreferenciapages"><code>docs/referencia/.pages</code></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Referencia Técnica</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">API</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api.md</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Configuración</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">config.md</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="docstutorialespages"><code>docs/tutoriales/.pages</code></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tutoriales</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Básico</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">basico.md</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Avanzado</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">avanzado.md</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p><strong>📝 Nota:</strong> Si no pones <code>.pages</code>, usará el nombre de la carpeta y orden alfabético.</p>
+</blockquote>
+<hr />
+<h2 id="paso-5-prueba-tu-sitio">Paso 5: Prueba tu sitio</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>mkdocs<span class="w"> </span>serve
+</code></pre></div></td></tr></table></div>
+<p>Verás las pestañas: <strong>Guías | Referencia Técnica | Tutoriales</strong>, con subpáginas organizadas según tus <code>.pages</code>.</p>
+<hr />
+<h2 id="consejo-final">💡 Consejo final</h2>
+<p>Guarda tus dependencias actualizadas:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="configuracion-completa-del-archivo-mkdocsyml">Configuración completa del archivo mkdocs.yml</h2>
+<p>Aquí tienes un ejemplo de configuración más completa con características adicionales:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-28-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-28-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-28-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-28-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-28-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-28-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-28-10">10</a></span>
+<span class="normal"><a href="#__codelineno-28-11">11</a></span>
+<span class="normal"><a href="#__codelineno-28-12">12</a></span>
+<span class="normal"><a href="#__codelineno-28-13">13</a></span>
+<span class="normal"><a href="#__codelineno-28-14">14</a></span>
+<span class="normal"><a href="#__codelineno-28-15">15</a></span>
+<span class="normal"><a href="#__codelineno-28-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">misdocs</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="nt">theme</span><span class="p">:</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">  </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">es</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">    </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">    </span><span class="nt">accent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indigo</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs</span><span class="w">          </span><span class="c1"># Activa pestañas horizontales</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.sections</span><span class="w">      </span><span class="c1"># Opcional: permite secciones colapsables</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.expand</span><span class="w">        </span><span class="c1"># Expande secciones automáticamente</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12"></a>
+<a id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="nt">plugins</span><span class="p">:</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesome-pages</span>
+<a id="__codelineno-28-15" name="__codelineno-28-15"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git-revision-date-localized</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="estructura-de-archivos-del-proyecto">Estructura de archivos del proyecto</h2>
+<p>Al finalizar, tu proyecto debería tener esta estructura:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-29-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-29-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-29-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-29-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-29-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-29-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-29-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-29-10">10</a></span>
+<span class="normal"><a href="#__codelineno-29-11">11</a></span>
+<span class="normal"><a href="#__codelineno-29-12">12</a></span>
+<span class="normal"><a href="#__codelineno-29-13">13</a></span>
+<span class="normal"><a href="#__codelineno-29-14">14</a></span>
+<span class="normal"><a href="#__codelineno-29-15">15</a></span>
+<span class="normal"><a href="#__codelineno-29-16">16</a></span>
+<span class="normal"><a href="#__codelineno-29-17">17</a></span>
+<span class="normal"><a href="#__codelineno-29-18">18</a></span>
+<span class="normal"><a href="#__codelineno-29-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>MISDOCS/
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a>├── .venv/
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a>├── docs/
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a>│   ├── index.md
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a>│   ├── guias/
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a>│   │   ├── intro.md
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a>│   │   └── instalacion.md
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a>│   ├── referencia/
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a>│   │   ├── api.md
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a>│   │   └── config.md
+<a id="__codelineno-29-11" name="__codelineno-29-11"></a>│   └── tutoriales/
+<a id="__codelineno-29-12" name="__codelineno-29-12"></a>│       ├── basico.md
+<a id="__codelineno-29-13" name="__codelineno-29-13"></a>│       └── avanzado.md
+<a id="__codelineno-29-14" name="__codelineno-29-14"></a>├── .gitignore
+<a id="__codelineno-29-15" name="__codelineno-29-15"></a>├── python-version
+<a id="__codelineno-29-16" name="__codelineno-29-16"></a>├── main.py
+<a id="__codelineno-29-17" name="__codelineno-29-17"></a>├── mkdocs.yml
+<a id="__codelineno-29-18" name="__codelineno-29-18"></a>├── pyproject.toml
+<a id="__codelineno-29-19" name="__codelineno-29-19"></a>└── README.md
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="comandos-de-referencia-rapida">Comandos de referencia rápida</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uv init misdocs</code></td>
+<td>Crear nuevo proyecto</td>
+</tr>
+<tr>
+<td><code>uv venv</code></td>
+<td>Crear entorno virtual</td>
+</tr>
+<tr>
+<td><code>source .venv/bin/activate</code></td>
+<td>Activar entorno (Linux/Mac)</td>
+</tr>
+<tr>
+<td><code>.\.venv\Scripts\activate</code></td>
+<td>Activar entorno (Windows)</td>
+</tr>
+<tr>
+<td><code>uv pip install mkdocs mkdocs-material</code></td>
+<td>Instalar dependencias base</td>
+</tr>
+<tr>
+<td><code>uv pip install mkdocs-awesome-pages-plugin</code></td>
+<td>Instalar plugin de páginas</td>
+</tr>
+<tr>
+<td><code>mkdocs new .</code></td>
+<td>Inicializar estructura MkDocs</td>
+</tr>
+<tr>
+<td><code>mkdocs serve</code></td>
+<td>Servidor de desarrollo local</td>
+</tr>
+<tr>
+<td><code>mkdocs build</code></td>
+<td>Construir sitio estático</td>
+</tr>
+<tr>
+<td><code>mkdocs gh-deploy</code></td>
+<td>Desplegar a GitHub Pages</td>
+</tr>
+<tr>
+<td><code>uv pip freeze &gt; requirements.txt</code></td>
+<td>Guardar dependencias</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="recursos-adicionales">Recursos adicionales</h2>
+<ul>
+<li><a href="https://www.mkdocs.org/">Documentación oficial de MkDocs</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></li>
+<li><a href="https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin">Awesome Pages Plugin</a></li>
+<li><a href="https://github.com/astral-sh/uv">UV Package Manager</a></li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>Con esta configuración tienes un proyecto MkDocs completamente funcional con:</p>
+<p>✅ Gestión de dependencias aislada con <code>uv</code><br />
+✅ Tema Material moderno y responsive<br />
+✅ Navegación automática organizada por carpetas<br />
+✅ Servidor de desarrollo local<br />
+✅ Preparado para despliegue en GitHub Pages</p>
+<p>¡Ahora puedes comenzar a escribir tu documentación en los archivos <code>.md</code> dentro de la carpeta <code>docs/</code>!</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Última actualización">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="9 de febrero de 2026 12:02:17 UTC">9 de febrero de 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
