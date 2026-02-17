@@ -1,17 +1,13 @@
-# Resumen: Artículos en Inglés
+# Artículos
 
 El Articulo es la palabra que acompaña al sustantivo y siembre va delante de él, se clasifican en Articulos Definidos e Indefinidos
 
+En inglés solo existe UN artículo determinado:
+🔹 THE (el, la, los, las)
+
 ![the](../../assets/imagenes/articulos.png)
 
-
-
 - El articulo Definido en ingles no tiene genero ni numero 
-- El articulo Indefinido se usa con sustantivos contables en su forma singular
-
-En español el significado es = el, la, los, las.
-En Ingles solo : el, la.
-
 
 ## Pronunciación de "The"
 
@@ -42,6 +38,7 @@ En Ingles solo : el, la.
 # Artículos Indefinidos
 
 Los articulos indefinidos en Ingles son dos : a, an ,  ambos significan lo mismo.
+- El articulo Indefinido se usa con sustantivos contables en su forma singular.
 
 ![Articulos Indefinidos](../../assets/imagenes/articulos_indefinidos.png)
 
