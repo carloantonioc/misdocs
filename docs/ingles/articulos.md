@@ -2,8 +2,8 @@
 
 El Articulo es la palabra que acompaña al sustantivo y siembre va delante de él, se clasifican en Articulos Definidos e Indefinidos
 
-![the](assets/imagenes/the_ipa.png)
-articulos.png
+![the](../../assets/imagenes/articulos.png)
+
 
 
 - El articulo Definido en ingles no tiene genero ni numero 
@@ -15,7 +15,7 @@ En Ingles solo : el, la.
 
 ## Pronunciación de "The"
 
-![the](assets/imagenes/the_ipa.png)
+![the](../../assets/imagenes/the_ipa.png)
 
 
 - **/ði/** → suena como **"di"** en español
@@ -43,11 +43,12 @@ En Ingles solo : el, la.
 
 Los articulos indefinidos en Ingles son dos : a, an ,  ambos significan lo mismo.
 
-![Articulos Indefinidos](assets/imagenes/articulos_indefinidos.png)
+![Articulos Indefinidos](../../assets/imagenes/articulos_indefinidos.png)
 
-![Significado](assets/imagenes/ariculos_indefinidos_definicion.png)
+![Significado](../../assets/imagenes/ariculos_indefinidos_definicion.png)
 
 # Excepciones
 
 Tanto para articulos definidos e indefinidos, las semivocales estan fuera de estas reglas.
 
+![Significado](../../assets/imagenes/articulos_excepciones.png)
