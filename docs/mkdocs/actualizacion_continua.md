@@ -55,15 +55,15 @@ mkdocs gh-deploy
 ```
 
 # 🎯 ¿POR QUÉ FUNCIONÓ ESTA SOLUCIÓN?
-# gh-pages es una rama "desechable"
-# Solo contiene archivos generados (HTML, CSS, JS)
-# No hay código fuente importante
-# Se puede regenerar en cualquier momento
-# Eliminar el historial conflictivo
-# En lugar de intentar fusionar versiones diferentes de archivos generados
-# Se eliminó todo y se creó desde cero
-# GitHub aceptó la nueva rama sin problemas
-# Clean slate (Pizarra limpia)
-# Sin commits divergentes
-# Sin archivos binarios en conflicto
-# Solo la versión más reciente de la documentación
+- gh-pages es una rama "desechable"
+- Solo contiene archivos generados (HTML, CSS, JS)
+- No hay código fuente importante
+- Se puede regenerar en cualquier momento
+- Eliminar el historial conflictivo
+- En lugar de intentar fusionar versiones diferentes de archivos generados
+- Se eliminó todo y se creó desde cero
+- GitHub aceptó la nueva rama sin problemas
+- Clean slate (Pizarra limpia)
+- Sin commits divergentes
+- Sin archivos binarios en conflicto
+- Solo la versión más reciente de la documentación
