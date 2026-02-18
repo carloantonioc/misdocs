@@ -2,12 +2,11 @@
 
 El Articulo es la palabra que acompaña al sustantivo y siembre va delante de él, se clasifican en Articulos Definidos e Indefinidos
 
-En inglés solo existe UN artículo determinado:
-🔹 THE (el, la, los, las)
+En inglés solo existe UN artículo determinado THE (el, la, los, las), y DOS articulos indefinidos (un, una, unos, unas):
 
 ![the](../../assets/imagenes/articulos.png)
 
-- El articulo Definido en ingles no tiene genero ni numero 
+A diferencia del español, no tienen una forma plural directa (no existe un "los","las","unos/unas")
 
 ## Pronunciación de "The"
 
@@ -37,8 +36,7 @@ En inglés solo existe UN artículo determinado:
 
 # Artículos Indefinidos
 
-Los articulos indefinidos en Ingles son dos : a, an ,  ambos significan lo mismo.
-- El articulo Indefinido se usa con sustantivos contables en su forma singular.
+Los articulos indefinidos en Ingles son dos : a, an , ambos significan lo mismo.
 
 ![Articulos Indefinidos](../../assets/imagenes/articulos_indefinidos.png)
 
