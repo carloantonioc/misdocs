@@ -1,7 +1,7 @@
 # artículos
 
 **Índice**
-clear
+
 1. [Artículo Definido](#artículo-definido)
 2. [Pronunciación de "The"](#pronunciacion-de-the)
 3. [Regla de Uso](#regla-de-uso)
