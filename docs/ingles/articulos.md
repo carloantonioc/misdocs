@@ -1,12 +1,12 @@
 # Artículos
 
-> **Índice**
-> 1. [Artículo Definido](#artículo-definido)
-> 2. [Pronunciación de "The"](#pronunciación-de-the)
-> 3. [Regla de Uso](#regla-de-uso)
-> 4. [Ejemplos Prácticos](#ejemplos)
-> 5. [Artículos Indefinidos](#artículos-indefinidos)
-> 6. [Excepciones](#excepciones)
+**Índice**
+1. [Artículo Definido](#artículo-definido)
+2. [Pronunciación de "The"](#pronunciación-de-the)
+3. [Regla de Uso](#regla-de-uso)
+4. [Ejemplos Prácticos](#ejemplos)
+5. [Artículos Indefinidos](#artículos-indefinidos)
+6. [Excepciones](#excepciones)
 
 El **artículo** es la palabra que acompaña al sustantivo y **siempre** va delante de él. Se clasifican en **Artículos Definidos** e **Indefinidos**.
 
