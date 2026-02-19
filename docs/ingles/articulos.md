@@ -1,22 +1,14 @@
-# Artículos
+# artículos
 
 **Índice**
-
+clear
 1. [Artículo Definido](#artículo-definido)
-2. [Pronunciación de "The"](#pronunciación-de-the)
+2. [Pronunciación de "The"](#pronunciacion-de-the)
 3. [Regla de Uso](#regla-de-uso)
-4. [Ejemplos Prácticos](#ejemplos-prácticos)
+4. [Ejemplos](#ejemplos)
 5. [Artículos Indefinidos](#artículos-indefinidos)
 6. [Excepciones](#excepciones)
 
-**Índice**
-
-- [Artículo Definido](#artículo-definido)
-- [Pronunciación de "The"](#pronunciación-de-the)
-- [Regla de Uso](#regla-de-uso)
-- [Ejemplos Prácticos](#ejemplos-prácticos)
-- [Artículos Indefinidos](#artículos-indefinidos)
-- [Excepciones](#excepciones)
 
 El **artículo** es la palabra que acompaña al sustantivo y **siempre** va delante de él. Se clasifican en **Artículos Definidos** e **Indefinidos**.
 
@@ -26,7 +18,7 @@ El **artículo** es la palabra que acompaña al sustantivo y **siempre** va dela
 **"The"** es el artículo definido en inglés y es invariable: sirve para género masculino, femenino, singular y plural. 
 A diferencia del español (el, la, los, las), en inglés no cambia, Por lo Tanto, en inglés solo existe **UN** artículo definido **the** (el, la, los, las).
 
-## Pronunciación de "The"
+## Pronunciacion de "The"
 
 ![the](../../assets/imagenes/the_ipa.png)
 
