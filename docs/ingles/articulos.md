@@ -1,13 +1,12 @@
 # Artículos
 
-El Articulo es la palabra que acompaña al sustantivo y siembre va delante de él, se clasifican en Articulos Definidos e Indefinidos
-
-"The" es el artículo definido en inglés y es invariable: sirve para género masculino, femenino, singular y plural. 
-A diferencia del español (el, la, los, las), en inglés no cambia, Por lo Tanto, en inglés solo existe UN artículo definido THE (el, la, los, las).
-Al igual que en los Articulos Indefinidos son dos, y son también son invariables en género masculino, femenino, singular y prural (un, una, unos, unas)
+El **artículo** es la palabra que acompaña al sustantivo y **siempre** va delante de él. Se clasifican en **Artículos Definidos** e **Indefinidos**.
 
 ![the](../../assets/imagenes/articulos.png)
 
+## Artículo Definido
+**"The"** es el artículo definido en inglés y es invariable: sirve para género masculino, femenino, singular y plural. 
+A diferencia del español (el, la, los, las), en inglés no cambia, Por lo Tanto, en inglés solo existe **UN** artículo definido **the** (el, la, los, las).
 
 ## Pronunciación de "The"
 
@@ -35,9 +34,10 @@ Al igual que en los Articulos Indefinidos son dos, y son también son invariable
 4. ✅ "**The** client needs **a** solution... **the** solution must be simple"
 5. ✅ "I go to **a** Mexican restaurant... **the** restaurant is amazing"
 
-# Artículos Indefinidos
 
-Los articulos indefinidos en Ingles son dos : a, an , ambos significan lo mismo.
+# Artículos Indefinidos
+Los artículos indefinidos también son invariables: sirven para género masculino, femenino y singular (un, una). 
+Solo existen **DOS** artículos indefinidos en inglés: **a** y **an**.
 
 ![Articulos Indefinidos](../../assets/imagenes/articulos_indefinidos.png)
 
@@ -45,6 +45,6 @@ Los articulos indefinidos en Ingles son dos : a, an , ambos significan lo mismo.
 
 # Excepciones
 
-Tanto para articulos definidos e indefinidos, las semivocales estan fuera de estas reglas.
+La regla de "a" vs "an" depende del **sonido** inicial, no de la letra escrita.
 
 ![Significado](../../assets/imagenes/articulos_excepciones.png)
