@@ -1,7 +1,7 @@
 # 🗣️ Talking About Others - Survival Kit
 
 > **Para describir personas y conversaciones en inglés (nivel A2-B1)**  
-> *Úsalo en Episoden para responder a moderadores DESPUÉS de una conversación (todo en pasado)*
+> *Úsalo para responder a moderadores DESPUÉS de una conversación (todo en pasado)*
 
 ---
 
