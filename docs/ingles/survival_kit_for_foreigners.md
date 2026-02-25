@@ -1,4 +1,4 @@
-# 🗣️ Survival Kit - Guía de Conversación en Inglés
+# 🗣️ Survival Kit - Foreigners
 
 > **Para aprendices de inglés nivel A2-B1**  
 > *Usa esta guía antes y durante tus sesiones*
@@ -8,16 +8,23 @@
 ## 📋 Índice
 
 1. [🌍 Países y Cultura](#-1-países-y-cultura)
-2. [💼 Profesiones y Trabajo](#-2-profesiones-y-trabajo)
-3. [🌤️ Clima y Estaciones](#-3-clima-y-estaciones)
-4. [🕐 Rutina Diaria](#-4-rutina-diaria)
-5. [🆘 Frases de Emergencia](#-5-frases-de-emergencia)
-6. [🔄 Flujo de Conversación (7 min)](#-6-flujo-de-conversación-7-min)
-7. [💡 Tips Finales](#-7-tips-finales)
+3. [🌤️ Clima y Estaciones](#-2-clima-y-estaciones)
+4. [🕐 Rutina Diaria](#-3-rutina-diaria)
+5. [🆘 Frases de Emergencia](#-4-frases-de-emergencia)
+6. [🔄 Flujo de Conversación (7 min)](#-5-flujo-de-conversación-7-min)
+7. [💡 Tips Finales](#-6-tips-finales)
 
 ---
 
 ## 🌍 1. Países y Cultura
+
+### Chile 
+
+>**Chile is a country in South America.** It's a long, narrow strip of land between the Andes Mountains and the vast Pacific Ocean. It's a country of many contrasts. In the north, it is very hot and there is the Atacama Desert. In the south, it is very cold and there are many glaciers.
+
+### Santiago
+>Santiago is the capital and largest city of Chile. It's in a valley surrounded by the Andes Mountains. The city has modern buildings, historic neighborhoods, and great food
+
 
 ### Preguntas para hacer
 | Frase en Inglés | Traducción |
@@ -30,44 +37,9 @@
 | `Have you traveled to other countries?` | ¿Has viajado a otros países? |
 | `What's the best city in your country?` | ¿Cuál es la mejor ciudad de tu país? |
 
-### Respuestas ejemplo (Chile 🇨🇱)
-```python
-"I'm from Chile, in South America."
-"Chile is long and narrow, with mountains and ocean."
-"We have deserts, glaciers, and beautiful beaches."
-"In Chile, we speak Spanish."
-"We love football, asado, and the beach!"
-"Santiago is the capital, but I like Valparaíso more."
-```
-
 ---
 
-## 💼 2. Profesiones y Trabajo
-
-### Preguntas para hacer
-| Frase en Inglés | Traducción |
-|----------------|-----------|
-| `What do you do? Work or study?` | ¿Qué haces? ¿Trabajas o estudias? |
-| `Do you like your job/studies?` | ¿Te gusta tu trabajo/estudios? |
-| `Is English useful for your work?` | ¿El inglés es útil para tu trabajo? |
-| `What's the most interesting part of your job?` | ¿Qué es lo más interesante de tu trabajo? |
-| `How long have you worked/studied there?` | ¿Cuánto tiempo has trabajado/estudiado allí? |
-| `Do you want to change your job in the future?` | ¿Quieres cambiar de trabajo en el futuro? |
-
-### Respuestas ejemplo (Carlos 👨‍💻)
-```python
-"I work in health security."
-"Before, I was a computer engineer for 20 years."
-"I needed a change, so I stepped out of my comfort zone."
-"Yes, English is useful for technology and reading."
-"I like solving problems and helping people."
-"Now I'm exploring new areas in health."
-```
-
-
----
-
-## 🌤️ 3. Clima y Estaciones
+## 🌤️ 2. Clima y Estaciones
 
 ### Preguntas para hacer
 | Frase en Inglés | Traducción |
